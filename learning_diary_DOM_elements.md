@@ -50,17 +50,14 @@ list.innerHTML = '<li>Nur noch eins</li>';
 
 ## Aufgabe 3 – Das `input` DOM-Element
 
-**Wichtige Parameter und ihre Bedeutung:**
+Das `input`-DOM-Element stellt ein Eingabefeld einer HTML-Seite in JavaScript dar. Dadurch kann JavaScript auf das Eingabefeld zugreifen und seine Eigenschaften auslesen oder verändern.
 
-| Parameter      | Bedeutung                                       |
-| -------------- | ----------------------------------------------- |
-| `.value`       | Aktueller Eingabewert des Nutzers               |
-| `.type`        | Art des Inputs (`text`, `checkbox`, `radio`, …) |
-| `.checked`     | `true/false` – ob Checkbox/Radio ausgewählt ist |
-| `.disabled`    | `true/false` – ob das Feld deaktiviert ist      |
-| `.placeholder` | Hinweistext im leeren Feld                      |
-| `.name`        | Name des Feldes (wichtig für Formulare)         |
-| `.id`          | ID des Elements                                 |
+Mit `.value` kann man den eingegebenen Wert auslesen. Mit `.placeholder` legt man einen Hinweistext fest. Die Eigenschaft `.disabled` bestimmt, ob das Eingabefeld deaktiviert ist. Bei Checkboxen und Radio-Buttons zeigt `.checked`, ob das Element ausgewählt wurde.
+
+Zuerst wird das Eingabefeld über seine ID gefunden:
+
+````js
+const input = document.getElementById('name');                                |
 
 **Beispiel:**
 
@@ -69,7 +66,7 @@ const input = document.getElementById('name');
 console.log(input.value); // Eingabe auslesen
 input.disabled = true; // Feld deaktivieren
 input.placeholder = 'Name...'; // Platzhalter setzen
-```
+````
 
 ```
 
